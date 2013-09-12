@@ -1,10 +1,11 @@
 var request = require('request'),
     jsdom = require('jsdom');
     var url = process.argv[2]
+    var error_text = 'Error when contacting the given reddit page.... you did give a reddit post as a URL right?... RIGHT?!?!?!... okay i\'ll calm down...';
 
 request({ uri: url }, function (error, response, body) {
   if (error && response.statusCode !== 200) {
-    console.log('Error when contacting the given reddit page.... you did give a reddit post as a URL right?... RIGHT?!?!?!... okay i\'ll calm down...');
+    console.log(error_text);
   }
   
   jsdom.env({
@@ -14,6 +15,10 @@ request({ uri: url }, function (error, response, body) {
     ], 
     done: function (err, window) {
       var $ = window.jQuery;
+      if ($("#classy_error")) {
+        console.log(error_text);
+        return false;
+      }
       var comments = $(".entry");
       var winner = comments.eq(Math.floor(Math.random()*comments.length)); // fetch the random winner
       var winner_name = winner.find('.author').text();
