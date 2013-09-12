@@ -15,9 +15,8 @@ request({ uri: url }, function (error, response, body) {
     done: function (err, window) {
       var $ = window.jQuery;
       var comments = $(".entry");
-      var winner = comments[Math.floor(Math.random()*comments.length)]; // fetch the random winner
+      var winner = comments.eq(Math.floor(Math.random()*comments.length)); // fetch the random winner
       var winner_name = $(winner).find(".author").text();
-      var winner_comment = $(winner).find("")
        // jQuery is now loaded on the jsdom window created from 'agent.body'
        console.log("And the winner is.... " + winner_name + "!");
     }
