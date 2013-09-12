@@ -15,7 +15,7 @@ request({ uri: url }, function (error, response, body) {
     ], 
     done: function (err, window) {
       var $ = window.jQuery;
-      if ($("#classy_error")) {
+      if ($("#classy-error").length) {
         console.log(error_text);
         return false;
       }
