@@ -18,3 +18,9 @@ All commands are done at terminal/command prompt
 where redditposturlhere is an actual url. An example may be:
 
 > node index.js http://www.reddit.com/r/RandomActsOfGaming/comments/1m805i/giveaway_a_random_assortment_of_games_from/
+
+## The Result? 
+
+You will see an output in your console window that says something like:
+
+> "And the winner is.... sdwrage!"
