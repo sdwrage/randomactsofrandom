@@ -1,0 +1,16 @@
+{
+  "name": "randomreddit",
+  "version": "0.0.0",
+  "description": "A random entry script to aid contest runners in selecting a random winner",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "reddit",
+    "random",
+    "contest"
+  ],
+  "author": "Justin Lonas",
+  "license": "BSD"
+}
