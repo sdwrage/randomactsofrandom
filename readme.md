@@ -11,6 +11,8 @@ You must have npm and node.js installed on your machine. For more information on
 
 ## Usage
 
+All commands are done at terminal/command prompt
+
 > node index.js redditposturlhere
 
 where redditposturlhere is an actual url. An example may be:
